@@ -263,7 +263,7 @@
                             <div class="single-products">
                                     <div class="productinfo text-center">
                                         <!--<img src="{{Storage::disk('local')->url('product_images/'.$product->image)}}" alt="" /> -->
-                                        <img src="{{asset('images/product-details/').$product->image}}" alt="" />
+                                        <img src="{{asset('images/product-details').'/'.$product->image}}" alt="" />
                                         <h2>{{$product->price}}</h2>
                                         <p>{{$product->description}}</p>
                                         <a href="{{route('AddToCartProduct',['id'=>$product->id])}}" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
