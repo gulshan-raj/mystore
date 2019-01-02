@@ -264,7 +264,7 @@
                                     <div class="productinfo text-center">
                                         <!--<img src="{{Storage::disk('local')->url('product_images/'.$product->image)}}" alt="" /> -->
                                         @if ($product->image != null)
-                                            <img src="{{product->image}}" alt="" />
+                                            <img src="{{$product->image}}" alt="" />
                                         @else
                                             <img src="{{asset('images/product-details/NoImageAvailable.jpg')}}" alt="" />
                                         @endif
