@@ -9,9 +9,7 @@ class Cart{
     public $totalPrice ;
 
     public function __construct($prevCart){
-        dump($prevCart);
         if($prevCart != null){
-            print_r('previous cart is not null');
             $this->items = $prevCart->items;
             $this->totalQuantity = $prevCart->totalQuantity;
             $this->totalPrice = $prevCart->totalPrice;
