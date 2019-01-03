@@ -23,12 +23,12 @@ class ProductsController extends Controller
     public function addProductToCart(Request $request, $id)
     {
         $prevCart = $request->session()->get('cart');
-        print_r('Previous Cart'.$prevCart);
+        print_r($prevCart);
         $cart = new Cart($prevCart);
-        print_r('new Cart'.$cart);
+        print_r($cart);
         $product = Product::find($id);
         $cart->addItem($id,$product);
-        print_r('new Cart after adding items:'.$cart);
+        print_r($cart);
         $request->session()->put('cart',$cart);
     }
 }
