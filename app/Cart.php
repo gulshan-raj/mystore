@@ -10,6 +10,7 @@ class Cart{
 
     public function __contruct($prevCart){
         if($prevCart != null){
+            print_r('previous cart is not null');
             $this->items = $prevCart->items;
             $this->totalQuantity = $prevCart->totalQuantity;
             $this->totalPrice = $prevCart->totalPrice;
@@ -32,7 +33,7 @@ class Cart{
             $productToAdd = ['quantity'=>1, 'price'=>$price, 'data'=>$product];
         }
 
-        $this->items[$id] = $product;
+        $this->items[$id] = $productToAdd;
         $this->totalQuantity++;
         $this->totalPrice = $this->totalPrice + $price;
         dump($this->items);
