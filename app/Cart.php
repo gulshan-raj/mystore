@@ -25,16 +25,15 @@ class Cart{
     public function addItem($id, $product){
         $price = (int) str_replace("$","",$product->price);
         if(!is_null($this->items) && array_key_exists($id,$this->items)){
-            print_r('inside if');
             $productToAdd = $this->items[$id];
             $productToAdd['quantity']++;
         }else{
-            print_r('inside else');
             $productToAdd = ['quantity'=>1, 'price'=>$price, 'data'=>$product];
         }
 
         $this->items[$id] = $productToAdd;
         $this->totalQuantity++;
         $this->totalPrice = $this->totalPrice + $price;
+        
     }
 }
