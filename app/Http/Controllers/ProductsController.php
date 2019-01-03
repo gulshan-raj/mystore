@@ -30,11 +30,11 @@ class ProductsController extends Controller{
 
     public function showCart(){
         $cart = Session::get('cart');
-
-        if($cart){
+        dump($cart);
+        /*if($cart){
             return view('cartproducts', ['cartItems'=>$cart]);
         }else{
             echo "cart is empty";
-        }
+        }*/
     }
 }
