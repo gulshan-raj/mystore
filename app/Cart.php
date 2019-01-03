@@ -37,7 +37,7 @@ class Cart{
             $this->items[$id] = $productToAdd;
             $this->totalQuantity++;
             $this->totalPrice = $this->totalPrice + $price;
-            dump($this->items);
+            //dump($this->items);
         }
     }
 }
