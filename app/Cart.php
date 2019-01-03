@@ -27,7 +27,7 @@ class Cart{
             $productToAdd = $this->items[$id];
             $productToAdd['quantity']++;
         }else{
-            $productToAdd = ['quantity'=>1, 'price'=>$price, 'data'=>$product, 'image'=>$product->image];
+            $productToAdd = ['quantity'=>1, 'price'=>$price, 'data'=>$product];
         }
 
         $this->items[$id] = $productToAdd;
