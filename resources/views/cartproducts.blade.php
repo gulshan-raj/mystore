@@ -2,16 +2,16 @@
     @foreach ($cartItems->items as $item)
         <tr>
             <td>
-                <img src="{{$item->image}}" alt="{{$item->description}}" height="250" />
+                <img src="{{$item['data']['image']}}" alt="{{$item['data']['description']}}" height="250" />
             </td>
             <td>
-                {{$item->name}}
+                {{$item['data']['name']}}
             </td>
             <td>
-                {{$item->description}}
+                {{$item['data']['description']}}
             </td>
             <td>
-                {{$item->price}}
+                    {{$item['data']['price']}}
             </td>
         </tr>
     @endforeach
