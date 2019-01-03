@@ -1,4 +1,18 @@
-<table>
+<table cellspacing="1" border="1">
+    <tr>
+        <th>
+            Product Image
+        </th>
+        <th>
+            Name
+        </th>
+        <th>
+            Description
+        </th>
+        <th>
+            Price
+        </th>
+    </tr>
     @foreach ($cartItems->items as $item)
         <tr>
             <td>
