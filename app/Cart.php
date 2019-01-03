@@ -8,7 +8,7 @@ class Cart{
     public $totalQuantity ;
     public $totalPrice ;
 
-    public function __contruct($prevCart){
+    public function __construct($prevCart)
         dump($prevCart);
         if($prevCart != null){
             print_r('previous cart is not null');
