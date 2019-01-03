@@ -24,17 +24,25 @@
                         @foreach ($cartItems->items as $item)
                             <tr>
                                 <td class="cart_product">
-                                    <img src="{{$item['data']['image']}}" alt="{{$item['data']['description']}}" height="250" />
+                                    <a href=""><img src="{{$item['data']['image']}}" alt="{{$item['data']['description']}}" height="250" /></a>
                                 </td>
                                 <td class="cart_description">
-                                    {{$item['data']['description']}}
+                                    <h4><a href="">{{$item['data']['name']}}</a></h4>
+                                    <p>{{$item['data']['description']}}</p>
+                                    <p>Web ID: {{$item['data']['id']}}</p>
                                 </td>
                                 <td class="cart_price">
-                                    {{$item['data']['price']}}
+                                    <p>{{$item['data']['price']}}</p>
                                 </td>
                                 <td class="cart_quantity">
+                                    <div class="cart_quantity_button">
+                                        <a class="cart_quantity_up" href=""> + </a>
+                                        <input class="cart_quantity_input" type="text" name="quantity" value="1" autocomplete="off" size="2">
+                                        <a class="cart_quantity_down" href=""> - </a>
+                                    </div>
                                 </td>
                                 <td class="cart_total">
+                                    <p class="cart_total_price"></p>
                                 </td>
                                 <td class="cart_delete">
                                     <a class="cart_quantity_delete" href=""><i class="fa fa-times"></i></a>
@@ -124,35 +132,3 @@
 		</div>
     </section><!--/#do_action-->
 @endsection
-<table cellspacing="1" border="1">
-    <tr>
-        <th>
-            Product Image
-        </th>
-        <th>
-            Name
-        </th>
-        <th>
-            Description
-        </th>
-        <th>
-            Price
-        </th>
-    </tr>
-    @foreach ($cartItems->items as $item)
-        <tr>
-            <td>
-                <img src="{{$item['data']['image']}}" alt="{{$item['data']['description']}}" height="250" />
-            </td>
-            <td>
-                {{$item['data']['name']}}
-            </td>
-            <td>
-                {{$item['data']['description']}}
-            </td>
-            <td>
-                    {{$item['data']['price']}}
-            </td>
-        </tr>
-    @endforeach
-</table>
