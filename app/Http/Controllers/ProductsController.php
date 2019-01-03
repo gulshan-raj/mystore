@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\DB;
 use App\Product;
 use Illuminate\Http\Request;
 use App\Cart;
-use lluminate\Support\Facades\Session;
+use Session;
 
 class ProductsController extends Controller{
      public function index(){
