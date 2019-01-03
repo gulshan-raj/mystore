@@ -27,6 +27,6 @@ class ProductsController extends Controller
         $product = Product::find($id);
         $cart->addItem($id,$product);
         $request->session()->put('cart',$cart);
-        dump($cart);
+        return redirect()->route('allProducts');
     }
 }
