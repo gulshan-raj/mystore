@@ -51,7 +51,7 @@ class ProductsController extends Controller{
 
         $request->session()->put('cart',$updatedCart);
         
-        return redirect()->route('cartproducts');
+        //return redirect()->route('cartproducts');
 
     }
 }
